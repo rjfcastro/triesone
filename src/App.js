@@ -1,20 +1,21 @@
-import './App.css';
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import Challenges from './components/Challenges'
+
+const challenges = [
+  {
+    title: 'Challenge 1',
+    description: 'this is the first challenge, this is just a random text'
+  },
+  {
+    title: 'Challenge 2',
+    description: 'additional random text'
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <AppBar>
-          <Toolbar>
-            <Typography variant="title" color="inherit">
-              Tries One
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </header>
+    <div>
+      <h1>Tries One</h1>
+        <Challenges listOfChallenges={challenges}/>
     </div>
   );
 }
